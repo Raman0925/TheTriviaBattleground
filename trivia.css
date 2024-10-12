@@ -17,6 +17,7 @@ body{
 }
 
 
+
 header{
     background-color: antiquewhite;
     width: full-width;
@@ -101,15 +102,67 @@ button:focus {
     box-shadow: 0 0 0 3px rgba(102, 175, 233, 0.5);
 }
 
+.players-form {
+    display: none;
 
+
+}
+
+.category-container{
+    display: flex;
+     width: 50%;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin: auto;
+     padding: 5%;
+     background-color: #66afe9;
+
+}
+
+#categories {
+    width: full-width;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: left;
+    border: 2px solid #66afe9;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    appearance: none;
+    background-image: url('path/to/your-arrow-icon.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+
+#categories:hover {
+    border-color: #5a9bd5;
+}
+
+#categories:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, .8);
+}
+
+option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
 
 .cat-sel-container{
-    display: none;
+    display: none;  
 }
+
+
+
+
 .battle-ground{
    display: none;
-    
-
 }
 .footer{
     flex-basis: 10%;

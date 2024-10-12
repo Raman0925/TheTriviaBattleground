@@ -17,16 +17,21 @@
         </header>
         <div class="forms">
             <form class="players-registration">
-                <Label for="player-1">Player 1</Label> <br>
-                <input type="text" name="player-1" id="player-1" placeholder="Enter the Player 1 name"><br>
+                <Label for="player-1" >Player 1</Label> <br>
+                <input type="text" name="player-1" id="player-1" placeholder="Enter the Player 1 name" minlength="3" required><br>
+                <span class="error" id="player1-error"></span><br>
                 <Label for="player-2">Player 2</Label> <br>
-                <input type="text" name="player-2" id="player-2" placeholder="Enter the Player 2 name"><br>
-                <button type="submit">Start Game</button>
+                <input type="text" name="player-2" id="player-2" placeholder="Enter the Player 2 name" minlength="3" required><br>
+                <span class="error" id="player2-error"></span><br>
+
+                <button type="submit" onclick="startGameHandler(event)">Start Game</button>
             </form>
-            <div class="cat-sel-container">
+            <div class="cat-sel-container" id="category-container">
                 <form class="categories-selection" >
                     <label for="categories">Select Category:</label>
                     <select id="categories">
+                        <option value="choose-category">Choose your Category</option>
+
                         <option value="food_and_drink">Food & Drink</option>
                         <option value="arts_and_literature">Arts and Literature</option>
                         <option value="film_and_tv">Film and TV</option>
@@ -38,6 +43,7 @@
                         <option value="society_and_culture">Society and Culture</option>
                         <option value="sport_and_leisure">Sport and Leisure</option>
                     </select>
+                    <Button onclick="battlegroundHandler(event)">Lets meet on the battle ground</Button>
                 </form>
             </div>
          </div>
@@ -70,7 +76,6 @@
 
 
     <script type="application/javascript" src="trivia.js"></script>
-    <script type="application/javascript" src="micro.js"></script>
 
     
 </body>
