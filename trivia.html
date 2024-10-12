@@ -11,14 +11,19 @@
 </head>
 <body>
     <div class="trivia-app">
+
         <header >
             The Trivia Battle Ground
-            
+            <div id="score">
+
+            </div>
+           
         </header>
-        <div class="forms">
+        <div class="forms" id="forms">
             <form class="players-registration">
+                <p>Name should be unique</p>
                 <Label for="player-1" >Player 1</Label> <br>
-                <input type="text" name="player-1" id="player-1" placeholder="Enter the Player 1 name" minlength="3" required><br>
+                <input type="text" name="player-1" id="player-1" placeholder="Enter the Player 1 Name" minlength="3" required><br>
                 <span class="error" id="player1-error"></span><br>
                 <Label for="player-2">Player 2</Label> <br>
                 <input type="text" name="player-2" id="player-2" placeholder="Enter the Player 2 name" minlength="3" required><br>
@@ -47,23 +52,22 @@
                 </form>
             </div>
          </div>
-        <div class="battle-ground">
+        <div class="battle-ground-h" id="battle-ground">
+
             
 
         </div>
+        <div id="feedback">
+                
+               
+        </div>
         <footer class="footer">
+
         \
                 <div class="footer-content">
                     <p>&copy; 2024 Trivia Battle Ground. All rights reserved.</p>
-                    <div class="social-media">
-                        <a href="https://facebook.com" target="_blank">Facebook</a> |
-                        <a href="https://twitter.com" target="_blank">Twitter</a> |
-                        <a href="https://instagram.com" target="_blank">Instagram</a>
-                    </div>
-                    <div class="contact-info">
-                        <p>Contact us: <a href="mailto:info@triviabattleground.com">info@triviabattleground.com</a></p>
-                    </div>
-                </div>
+                   
+                  </div>
           
             
         </footer>

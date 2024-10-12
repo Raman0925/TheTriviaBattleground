@@ -16,13 +16,17 @@ body{
     
 }
 
-
+.score-item {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  
 
 header{
     background-color: antiquewhite;
     width: full-width;
     height: 20%;
-    flex-basis: 10%;
+    flex-basis: 6%;
 }
 .forms{
     flex-basis: 80%;
@@ -70,6 +74,14 @@ textarea::placeholder {
     font-size: medium; 
     opacity: 1;
 }
+.player-name {
+    font-size: 1.2em;        
+    font-weight: bold;      
+    color: #4A90E2;         
+    margin-bottom: 10px;     
+    text-align: center;     
+  }
+  
 
 input:focus::placeholder,
 textarea:focus::placeholder {
@@ -107,6 +119,9 @@ button:focus {
 
 
 }
+#feedback{
+    flex-basis: 10%;
+}
 
 .category-container{
     display: flex;
@@ -132,7 +147,7 @@ button:focus {
     font-size: 16px;
     color: #333;
     appearance: none;
-    background-image: url('path/to/your-arrow-icon.png');
+    background-image: url('./image.png');
     background-repeat: no-repeat;
     background-position: right 10px center;
 }
@@ -157,14 +172,48 @@ option {
 .cat-sel-container{
     display: none;  
 }
+.answer-button {
+    background-color: #66afe9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .answer-button:hover {
+    background-color: #5a9bd5;
+  }
+  .question-div {
+    padding: 20px;
+    border: 2px solid #66afe9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .question-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
 
 
 
-
-.battle-ground{
+.battle-ground-h{
    display: none;
 }
+.battle-ground{
+    flex-basis: 80%;
+    border: 1px solid black;
+    background:#7A1CAC;
+
+}
 .footer{
-    flex-basis: 10%;
+    flex-basis: 4%;
     text-align: center;
 }
