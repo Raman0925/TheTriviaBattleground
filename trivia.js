@@ -3,7 +3,9 @@ let categories = document.getElementById("categories").value;
 
 
 // Fetching Easy Questions
-
+const playerName = () =>{
+  
+}
 const fetchingEasyQuestions = async (categories) => {
   const URL =  `https://the-trivia-api.com/api/questions?categories=${categories}&limit=2&difficulty=easy`
   const response = await fetch(URL, {
