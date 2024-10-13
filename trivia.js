@@ -114,7 +114,7 @@ const updateScoreDisplay = () => {
 
   const player2ScoreElement = document.createElement("div");
   player2ScoreElement.textContent = `${
-    player2.charAt(0).toUpperCase() + player1.slice(1)
+    player2.charAt(0).toUpperCase() + player2.slice(1)
   }: ${playerScores[player2]}`;
   player2ScoreElement.classList.add("score-item"); // Optional styling class
 
@@ -219,7 +219,7 @@ const startGameHandler = (e) => {
 
   playerScores[player1] = 0;
   playerScores[player2] = 0;
-  if (player1.length > 3 && player2.length > 3) {
+  if (player1.length > 2 && player2.length > 2) {
     const playersRegistration = document.getElementsByClassName(
       "players-registration"
     );
