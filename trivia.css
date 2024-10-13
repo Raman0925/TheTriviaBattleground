@@ -159,9 +159,22 @@ button:focus {
     font-size: 16px;
     color: #333;
     appearance: none;
-    background-image: url('./image.png');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
+    
+    
+}
+#modifiedCategories{
+    width: full-width;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: left;
+    border: 2px solid #66afe9;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    appearance: none;
+
 }
 
 
