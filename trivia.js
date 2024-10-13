@@ -70,6 +70,29 @@ const fetchingQuestions = async (categories) => {
     return []; // Return an empty array on error
   }
 };
+const winnerAnnouncement = () => {
+  const announcementElement = document.getElementById("winnerAnnouncement");
+  let message;
+
+  if (playerScores[player1] > playerScores[player2]) {
+    message = `🎉 Congratulations, ${player1}! You are the winner! 🎉`;
+    announcementElement.style.color = "green";
+    announcementElement.style.fontWeight = "bold";
+    announcementElement.style.fontSize = "24px";
+  } else if (playerScores[player1] < playerScores[player2]) {
+    message = `🎉 Congratulations, ${player2}! You are the winner! 🎉`;
+    announcementElement.style.color = "green";
+    announcementElement.style.fontWeight = "bold";
+    announcementElement.style.fontSize = "24px";
+  } else {
+    message = "It's a tie! 🎊 Well played both!";
+    announcementElement.style.color = "orange";
+    announcementElement.style.fontWeight = "normal";
+    announcementElement.style.fontSize = "20px";
+  }
+
+  announcementElement.innerHTML = message;
+};
 
 const removingCategories = () => {
   const endForm = document.getElementById("endForm");
@@ -94,6 +117,10 @@ const removingCategories = () => {
   nextCategoryButton.textContent = "Select Another Category";
   nextCategoryButton.onclick = afterNextCategory;
   endForm.append(nextCategoryButton);
+  const endGameButton = document.createElement("button");
+  endGameButton.textContent = "End Game";
+  endGameButton.onclick = winnerAnnouncement;
+  endForm.append(endGameButton);
 };
 
 const displayFeedback = (message) => {
@@ -202,10 +229,15 @@ const endGame = () => {
   const endScreen = document.getElementById("endGame");
   endScreen.classList.remove("next-categories-h");
   endScreen.classList.add("next-categories");
-
-  displayFeedback(
-    `Game over! Final scores - ${player1}: ${playerScores[player1]}, ${player2}: ${playerScores[player2]}`
-  );
+  if (playerScores[player1] > playerScores[player2]) {
+    displayFeedback(
+      ` Final scores - ${player1}: ${playerScores[player1]}, ${player2}: ${playerScores[player2]}
+      and winner is ${player1}`
+    );
+  } else {
+    ` Final scores - ${player1}: ${playerScores[player1]}, ${player2}: ${playerScores[player2]}
+      and winner is ${player2}`;
+  }
 
   // Task 3 Create a button to allow selecting another category
 };
