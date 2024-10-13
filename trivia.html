@@ -11,13 +11,10 @@
 </head>
 <body>
     <div class="trivia-app">
-
         <header >
             The Trivia Battle Ground
             <div id="score">
-
-            </div>
-           
+            </div>       
         </header>
         <div class="forms" id="forms">
             <form class="players-registration">
@@ -28,7 +25,6 @@
                 <Label for="player-2">Player 2</Label> <br>
                 <input type="text" name="player-2" id="player-2" placeholder="Enter the Player 2 name" minlength="3" required><br>
                 <span class="error" id="player2-error"></span><br>
-
                 <button type="submit" onclick="startGameHandler(event)">Start Game</button>
             </form>
             <div class="cat-sel-container" id="category-container">
@@ -49,38 +45,28 @@
                         <option value="sport_and_leisure">Sport and Leisure</option>
                     </select>
                     <Button onclick="battlegroundHandler(event)">Lets meet on the battle ground</Button>
+                    <span id="battleground-error"></span>
                 </form>
             </div>
          </div>
         <div class="battle-ground-h" id="battle-ground">
-
-            
-
         </div>
+        <div id="endGame" class="next-categories-h">
+            <h1></h1>
+            <p>Choose another categories and increase your points</p>
+            <select id="modifiedCategories">
+            </select>
+            <div id="endForm">
+                </div>
+            </div>
         <div id="feedback">
-                
-               
         </div>
         <footer class="footer">
-
-        \
                 <div class="footer-content">
                     <p>&copy; 2024 Trivia Battle Ground. All rights reserved.</p>
-                   
                   </div>
-          
-            
         </footer>
-        
-        
-
-        
     </div>
-
-
-
-    <script type="application/javascript" src="trivia.js"></script>
-
-    
+    <script type="application/javascript" src="trivia.js"></script>   
 </body>
 </html>

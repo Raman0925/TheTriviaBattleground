@@ -15,11 +15,22 @@ body{
 
     
 }
+.feedback-flex{
+    flex-basis: 80%;
+}
 
 .score-item {
     margin: 5px 0;
     font-weight: bold;
   }
+  .next-categories{
+    flex-basis: 40%;
+    background-color: #4A90E2;
+  }
+
+.next-categories-h{
+    display: none;
+}
   
 
 header{
@@ -27,9 +38,10 @@ header{
     width: full-width;
     height: 20%;
     flex-basis: 6%;
+    text-align: center;
 }
 .forms{
-    flex-basis: 80%;
+    flex-basis: 40%;
     border: 2px solid red;
     text-align: center;
     display: flex;
