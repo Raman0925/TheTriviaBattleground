@@ -96,32 +96,50 @@ const winnerAnnouncement = () => {
 
 const removingCategories = () => {
   const endForm = document.getElementById("endForm");
-  endForm.innerHTML = "";
+  endForm.innerHTML = ""; // Clear the form
 
   const modifiedCategories = document.getElementById("modifiedCategories");
+  modifiedCategories.innerHTML = ""; // Clear previous options
 
-  modifiedCategories.innerHTML = "";
-
-  filteredCategories = categoriesArray.filter(
+  // Filter categories based on selected categories
+  const filteredCategories = categoriesArray.filter(
     (category) => !selectedCategories.includes(category)
   );
 
-  filteredCategories.forEach((element) => {
-    const option = document.createElement("option");
-    option.text = element.toUpperCase().replace(/_/g, " ");
-    option.value = element;
-    modifiedCategories.appendChild(option);
-  });
+  // Check if there are any filtered categories
+  if (filteredCategories.length === 0) {
+    const noCategoriesMessage = document.createElement("p");
+    noCategoriesMessage.textContent = "No categories available.";
+    endForm.appendChild(noCategoriesMessage);
 
-  const nextCategoryButton = document.createElement("button");
-  nextCategoryButton.textContent = "Select Another Category";
-  nextCategoryButton.onclick = afterNextCategory;
-  endForm.append(nextCategoryButton);
-  const endGameButton = document.createElement("button");
-  endGameButton.textContent = "End Game";
-  endGameButton.onclick = winnerAnnouncement;
-  endForm.append(endGameButton);
+    // Create only the End Game button
+    const endGameButton = document.createElement("button");
+    endGameButton.textContent = "End Game";
+    endGameButton.onclick = winnerAnnouncement;
+    endForm.append(endGameButton);
+  } else {
+    // If there are filtered categories, populate the dropdown
+    filteredCategories.forEach((element) => {
+      const option = document.createElement("option");
+      option.text = element.toUpperCase().replace(/_/g, " ");
+      option.value = element;
+      modifiedCategories.appendChild(option);
+    });
+
+    // Create the Select Another Category button
+    const nextCategoryButton = document.createElement("button");
+    nextCategoryButton.textContent = "Select Another Category";
+    nextCategoryButton.onclick = afterNextCategory;
+    endForm.append(nextCategoryButton);
+
+    // Create the End Game button
+    const endGameButton = document.createElement("button");
+    endGameButton.textContent = "End Game";
+    endGameButton.onclick = winnerAnnouncement;
+    endForm.append(endGameButton);
+  }
 };
+
 
 const displayFeedback = (message) => {
   const feedbackDiv = document.getElementById("feedback");
