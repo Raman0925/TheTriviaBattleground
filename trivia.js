@@ -251,7 +251,7 @@ const startGameHandler = (e) => {
 
   playerScores[player1] = 0;
   playerScores[player2] = 0;
-  if (player1.length > 2 && player2.length > 2) {
+  if (player1.length > 3 && player2.length > 3) {
     const playersRegistration = document.getElementsByClassName(
       "players-registration"
     );
@@ -262,12 +262,12 @@ const startGameHandler = (e) => {
   } else {
     const span1 = document.getElementById("player1-error");
     const span2 = document.getElementById("player2-error");
-    if (player1.length < 2) {
+    if (player1.length < 3) {
       span1.textContent =
         "Minimum 3 letters in the name and name should be different";
       span1.style.color = "red";
     }
-    if (player2.length < 2) {
+    if (player2.length < 3) {
       span2.textContent =
         "Minimum 3 letters in the name and name should be different";
       span2.style.color = "red";
@@ -293,7 +293,7 @@ const battlegroundHandler = async (event) => {
 
     quizData = await fetchingQuestions(categories);
 
-    console.log(quizData);
+   
 
     questionIndex = 0;
     askNextQuestion();

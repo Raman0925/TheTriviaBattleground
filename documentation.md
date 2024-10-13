@@ -3,6 +3,9 @@
 ## Overview
 This document explains the code for a quiz game that allows two players to answer questions from various categories. Players take turns answering questions, and their scores are updated based on their answers. The game supports multiple categories and difficulty levels.
 
+
+## Plan 
+ Plan was to make UI dynamically but Choose to go with some forms made in html. I was adding Elements dynamically while showing questions.
 ## Key Components
 
 ### Variables
